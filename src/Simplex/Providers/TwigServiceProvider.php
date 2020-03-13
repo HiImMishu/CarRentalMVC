@@ -20,6 +20,11 @@ class TwigServiceProvider extends ServiceProvider
       throw new \Exception('twig provide must have urlGenerator');
     }
 
+    $functionAsset = new \Twig\TwigFunction('asset', function ($filename) {
+      return '/assets/'.$filename;
+    });
+    $twig->addFunction($functionAsset);
+
     return $twig;
   }
 }
