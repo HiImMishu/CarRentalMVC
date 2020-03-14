@@ -10,7 +10,7 @@
 .topBar {
   display: table;
   width: 100vw;
-  height: 50px;
+  height: 90px;
   background-color: #2F3640;
 }
 
@@ -19,7 +19,7 @@
   vertical-align: middle;
   padding-left: 20px;
   font-family: 'Kaushan Script', cursive;
-  font-size: 20px;
+  font-size: 28px;
   color: white;
 }
 
@@ -35,16 +35,25 @@
   color: #F1F6FB;
 }
 
-#toggle {
+.burgerPosition {
   padding-right: 10px;
   display: table-cell;
   vertical-align: middle;
+}
+
+#toggle {
   font-size: 28px;
+  cursor: pointer;
 }
 
 #navigation {
+  display: none;
   position: fixed;
   width: 100vw;
+}
+
+.dp {
+  display: block !important;
 }
 
 .item {
@@ -63,4 +72,212 @@
 .itemVisible {
   opacity: 1;
   visibility: visible;
+}
+
+.offer {
+  background-color: #242240;
+  height: 250px;
+  padding: 0 20px;
+}
+
+.offerImg {
+  height: 100%;
+  background-image: url('../img/img1.jpg');
+  background-size: cover;
+}
+
+.offerText {
+  display: block;
+  text-align: center;
+  padding-top: 30px;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 60px;
+  color: white;
+}
+
+.offerButton, .offer:after {
+  position: static;
+  text-align: center;
+  color: white;
+  margin: 50px auto;
+  width: 200px;
+  font-family: Helvetica;
+  font-size: 20px;
+  text-decoration: none;
+  display: block;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: red;
+}
+
+.offerButton:hover {
+  font-weight: bold;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  height: 250px;
+  margin: auto;
+}
+
+.sliderImg{
+  width: 100%;
+  height: 250px;
+}
+
+.opacity {
+  position: absolute;
+  top: 340px;
+  width: 100vw;
+  background-color: red;
+  height: 250px;
+  opacity: 0.6;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  float: left;
+  position: relative;
+  top: -180px;
+  padding: 15px 15px 15px 5px;
+  cursor: pointer;
+  width: auto;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  float: right;
+  right: 0;
+  padding: 15px 5px 15px 15px;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  top:-140px;
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.sliderLink {
+  font-weight: 500;
+  letter-spacing: 3px;
+  font-size: 20px;
+  text-decoration: none;
+  color: #F1F2F2;
+  transition: all 0.5s;
+}
+
+.sliderLink:hover {
+  word-spacing: 10px;
+}
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.articleHeaderS {
+  text-align: center;
+  font-family: "Arial Black";
+  font-size: 18px;
+  word-spacing: 6px;
+  padding-top: 40px;
+  color: #231F20;
+}
+
+.articleHeaderL {
+  text-align: center;
+  font-family: "Georgia Bold";
+  font-size: 28px;
+  padding: 20px 0;
+  color: #231F20;
+}
+
+.articleText {
+  text-align: justify;
+  padding: 0 30px 30px;
+  line-height: 20px;
+}
+
+.articleTextL {
+  text-align: center;
+  font-style: italic;
+  font-family: "Georgia Bold";
+  font-size: 20px;
+  color: #231F20;
+}
+
+.articlePhoto {
+  padding: 30px;
+  height: 250px;
+}
+
+.articleImg {
+  height: 100%;
+  width: 100%;
+}
+
+footer {
+  background-color: #242240;
+  height: 400px;
+}
+
+.contentFooter {
+  padding: 0 30px;
+}
+
+.footerHeader {
+  padding: 30px 30px 20px 30px;
+  color: #F2F8FD;
+  font-size: 20px;
+  font-family: Helvetica;
+}
+
+.footerLink {
+  padding: 0 30px;
+  text-decoration: none;
+  color: #8C8C8C;
+}
+
+.footerInfo {
+  text-align: justify;
+  padding: 50px 20px 0;
+  font-size: 20px;
+  line-height: 30px;
+  color: #F2F2F2;
+  font-weight: bold;
+}
+
+.colorRed {
+  color: #B40A1B;
 }
