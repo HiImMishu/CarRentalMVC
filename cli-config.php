@@ -8,23 +8,11 @@ use Doctrine\ORM\EntityManager;
 
 $smModuleArg = false;
 
-foreach ($_SERVER['argv'] as $key->$val) {
-    if (preg_match('/--sm-module/', $val)) {
-        $smModuleArg = $val;
-        unset($_SERVER['argv'][$key]);
-        $_SERVER['argc'] = $_SERVER['argc']-1;
-    }
-}
-
-if ($smModuleArg) {
-    $path = array(__DIR__.'/src/'.explode(':', $smModuleArg)[1]);
-} else {
-    $paths = array(__DIR__.'/src/');
-}
+$paths = array(__DIR__.'\src\Models');
 
 $isDevMode = true;
 
-$dbParams = include(__DIR__./'src/config.php');
+$dbParams = include(__DIR__.'/src/config.php');
 
 $config = Setup::createAnnotationMetadataConfiguration($paths, $isDevMode);
 $entityMenager = EntityManager::create($dbParams['database'], $config);

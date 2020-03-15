@@ -2,6 +2,11 @@
   margin: 0;
 }
 
+.logoLink {
+  text-decoration: none;
+  color: #FFF;
+}
+
 .container {
   width: 100;
   margin: 0 auto;
@@ -280,4 +285,10 @@ footer {
 
 .colorRed {
   color: #B40A1B;
+}
+
+.loginBackground {
+  margin: 0;
+  background-color: #1A2026;
+  height: 100vh;
 }

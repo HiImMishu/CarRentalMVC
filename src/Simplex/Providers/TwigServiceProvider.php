@@ -23,7 +23,13 @@ class TwigServiceProvider extends ServiceProvider
     $functionAsset = new \Twig\TwigFunction('asset', function ($filename) {
       return '/assets/'.$filename;
     });
+
+    $functionUrl = new \Twig\TwigFunction('url', function ($name, $parameters = []) use ($options) {
+      return $options['urlGenerator']->generate($name, $parameters);
+    });
+
     $twig->addFunction($functionAsset);
+    $twig->addFunction($functionUrl);
 
     return $twig;
   }

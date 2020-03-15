@@ -11,9 +11,10 @@
 </head>
 <body>
   <div class="container">
-    {{ include('Views/Layout/header.html.twig') }}
+    {% block header %}{{ include('Views/Layout/header.html.twig') }}{% endblock %}
     {% block content %}{% endblock %}
-    {{ include('Views/Layout/footer.html.twig') }}
+    {% block login %}{% endblock %}
+    {% block footer %}{{ include('Views/Layout/footer.html.twig') }}{% endblock %}
   </div>
 </body>
 </html>
