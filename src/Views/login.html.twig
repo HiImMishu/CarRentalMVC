@@ -8,6 +8,23 @@
 
   <span class="offerText"><a class="logoLink" href="{{url('user')}}">Lux<span class="colorRed">Car</span></a></span>
 
+  <div class="login">
+    <form method="post">
+
+      <input class="loginInput" type="text" name="email" placeholder="Email" value="{{ email }}">
+      <div class="loginError">
+        {{emailError}}
+      </div>
+
+      <input class="loginInput" type="text" name="password" placeholder="Hasło">
+      <div class="loginError">
+        {{passwordError}}
+      </div>
+
+      <button class="loginSubmit" type="submit">ZALOGUJ</button>
+
+    </form>
+  </div>
 
 </div>
 

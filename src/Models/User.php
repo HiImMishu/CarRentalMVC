@@ -1,5 +1,5 @@
 <?php
-namespace Model;
+namespace Models;
 
 /**
  * @Entity @Table(name = "user")
@@ -9,16 +9,16 @@ namespace Model;
    /** @Id @Column(type="integer") @GeneratedValue **/
    protected $id;
 
-   /** @FirstName(type = "string") **/
+   /** @FirstName @Column(type = "string") **/
    protected $firstName;
 
-   /** @LastName(type = "string") **/
+   /** @LastName @Column(type = "string") **/
    protected $lastName;
 
-   /** @Email(type = "string") **/
+   /** @Email @Column(type = "string") **/
    protected $email;
 
-   /** @Password (type = "string") **/
+   /** @Password @Column(type = "string") **/
    protected $password;
 
    public function getId()

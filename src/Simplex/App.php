@@ -5,6 +5,7 @@ namespace Simplex;
 use Simplex\Providers\TwigServiceProvider;
 use Simplex\Providers\DoctrineServiceProvider;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\Routing\Generator\UrlGenerator;
 use Symfony\Component\Routing;
 
@@ -49,5 +50,10 @@ class App
   private function loadConfig()
   {
     $this->config = include(__DIR__.'/../config.php');
+  }
+
+  protected function redirect($path, $data = [])
+  {
+    return new RedirectResponse($path, 302, $data);
   }
 };

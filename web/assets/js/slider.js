@@ -1,7 +1,9 @@
 document.addEventListener("DOMContentLoaded", function(event) {
-  slideIndex = 1;
-  auto = 1;
-  showSlides(slideIndex);
+  if (document.getElementsByClassName("mySlides").length != 0) {
+    slideIndex = 1;
+    auto = 1;
+    showSlides(slideIndex);
+  }
 });
 
 // Next/previous controls
