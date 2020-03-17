@@ -1,10 +1,15 @@
 
 <header>
   <div class="topBar">
-    <span class="logoText">Lux<span class="colorRed">Car</span></span>
+    <span class="logoText"><a class="logoLink" href="{{url('Index')}}">Lux<span class="colorRed">Car</span></a></span>
     <span class="topBarItems">
-      <a class="topBarItem" href="{{url('login')}}">Logowanie</a>
-      <a class="topBarItem" href="#">Rejestracja</a>
+      {% if not firstName %}
+        <a class="topBarItem" href="{{url('login')}}">Logowanie</a>
+        <a class="topBarItem" href="{{url('register')}}">Rejestracja</a>
+      {% else %}
+        <span class="topBarText">Witaj {{firstName}}</span>
+        <a class="topBarItem" href="{{url('logout')}}">Wyloguj</a>
+      {% endif %}
     </span>
     <span class="burgerPosition">
       <span id="toggle" onClick="onClickMenu()">&#9776;</span>

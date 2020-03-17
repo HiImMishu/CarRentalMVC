@@ -36,7 +36,10 @@ class LoginController extends App
         'email' => $request->request->get('email')
       ));
     else
-      return $this->redirect('users', ['user' => $user->getEmail()]);
+    {
+      $this->getSession()->set('firstName', $user->getFirstName());
+      return $this->redirect('/');
+    }
   }
 
   public function sanitizeString($string)

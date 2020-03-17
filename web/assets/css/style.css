@@ -46,6 +46,12 @@ input {
   color: #F1F6FB;
 }
 
+.topBarText {
+  word-spacing: normal;
+  color: #F1F6FB;
+
+}
+
 .burgerPosition {
   padding-right: 10px;
   display: table-cell;
@@ -293,13 +299,13 @@ footer {
   color: #B40A1B;
 }
 
-.loginBackground {
+.loginBackground, .registerBackground {
   margin: 0;
   background-color: #1A2026;
-  height: 100vh;
+  min-height: 100vh;
 }
 
-.login {
+.login, .register {
   margin: 70px auto;
   padding: 0 40px 0 40px;
 }
@@ -310,7 +316,7 @@ footer {
   font-size: 15px;
 }
 
-.loginInput {
+.loginInput, .registerInput {
   display: block;
   margin-top: 50px;
   width: calc(95% - 4px);
@@ -320,7 +326,7 @@ footer {
   border-radius: 3px;
 }
 
-.loginSubmit {
+.loginSubmit, .registerSubmit {
   padding: 1px 0;
   margin-top: 50px;
   border-radius: 3px;
@@ -342,4 +348,16 @@ footer {
 
 .loginSubmit:hover {
   background-color: #0250E1;
+}
+
+.register {
+  margin: 50px auto 0;
+}
+
+.registerInput {
+  margin-top: 30px;
+}
+
+.registerSubmit {
+  margin-bottom: 20px;
 }

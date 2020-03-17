@@ -1,0 +1,51 @@
+{% extends 'Views/Layout/layout.html.twig' %}
+
+{% block siteJS %}
+  <script src="{{asset('js/validateRegister.js')}}"></script>
+{% endblock %}
+{% block header %}{% endblock %}
+
+{% block login %}
+
+<div class="registerBackground">
+
+  <span class="offerText"><a class="logoLink" href="{{url('Index')}}">Lux<span class="colorRed">Car</span></a></span>
+
+  <div class="register">
+    <form method="post" id="registerForm">
+
+      <input id="firstName" class="registerInput" type="text" name="firstName" placeholder="Imie" value="{{ firstName }}">
+      <div id="firstNameError" class="loginError">
+        {{firstNameError}}
+      </div>
+
+      <input id="lastName" class="registerInput" type="text" name="lastName" placeholder="Nazwisko" value="{{ lastName }}">
+      <div id="lastNameError" class="loginError">
+        {{lastNameError}}
+      </div>
+
+      <input id="email" class="registerInput" type="text" name="email" placeholder="Email" value="{{ email }}">
+      <div id="emailError" class="loginError">
+        {{emailError}}
+      </div>
+
+      <input id="password" class="registerInput" type="password" name="password" placeholder="Hasło">
+      <div id="passwordError" class="loginError">
+        {{passwordError}}
+      </div>
+
+      <input id="password2" class="registerInput" type="password" name="password2" placeholder="Powtórz Hasło">
+      <div id="password2Error" class="loginError">
+        {{password2Error}}
+      </div>
+
+      <button class="registerSubmit" type="button" id="registerButton">ZALOGUJ</button>
+
+    </form>
+  </div>
+
+</div>
+
+{% endblock %}
+
+{% block footer %}{% endblock %}

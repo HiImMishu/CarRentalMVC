@@ -6,6 +6,7 @@ use Simplex\Providers\TwigServiceProvider;
 use Simplex\Providers\DoctrineServiceProvider;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\Routing\Generator\UrlGenerator;
 use Symfony\Component\Routing;
 
@@ -18,6 +19,8 @@ class App
   private $entityMenager;
 
   private $urlGenerator;
+
+  private $session;
 
   public function __construct()
   {
@@ -33,6 +36,10 @@ class App
 
     $doctrine = new DoctrineServiceProvider($this->config['database']);
     $this->entityMenager = $doctrine->provide();
+
+    $this->session = new Session();
+    $this->session->start();
+
   }
 
   public function render($name, $data = [])
@@ -54,6 +61,11 @@ class App
 
   protected function redirect($path, $data = [])
   {
-    return new RedirectResponse($path, 302, $data);
+    return new RedirectResponse($path);
+  }
+
+  protected function getSession()
+  {
+    return $this->session;
   }
 };
