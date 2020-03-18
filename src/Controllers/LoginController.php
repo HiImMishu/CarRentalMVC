@@ -20,14 +20,15 @@ class LoginController extends App
   public function login(Request $request)
   {
     $user = new User();
+    $passwordError = null;
 
     $eM = $this->getEntityMenager();
 
     $user = $eM->getRepository('Models\User')->findOneBy(['email' => $request->request->get('email')]);
     $emailError = is_null($user) ? "Użytkownik o takim adresie nie istnieje." : null;
 
-    $user = $eM->getRepository('Models\User')->findOneBy(['email' => $request->request->get('email'), 'password' => $request->request->get('password')]);
-    $passwordError = is_null($user) && is_null($emailError) ? "Niepoprawne hasło" : null;
+    if(is_null($emailError))
+        $passwordError = password_verify($request->request->get('password'), $user->getPassword()) ? null : "Niepoprawne hasło";
 
     if(!is_null($emailError) || !is_null($passwordError))
       return $this->render('Views/login.html.twig', array(

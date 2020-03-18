@@ -38,7 +38,7 @@ namespace Models;
 
    public function setFirstName($firstName)
    {
-     $this->frstName = $firstName;
+     $this->firstName = $firstName;
    }
 
    public function getLastName()
