@@ -5,7 +5,7 @@ namespace Models;
 use Models\Car;
 
 /**
-  *@Entity @ImageUrl(name =" ImageUrl")
+  *@Entity @Table(name ="ImageUrl")
   */
 
 class ImageUrl
