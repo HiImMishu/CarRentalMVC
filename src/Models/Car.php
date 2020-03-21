@@ -67,7 +67,7 @@ class Car
 
   public function getModel()
   {
-    return $this->$model;
+    return $this->model;
   }
 
   public function setModel($model)

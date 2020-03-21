@@ -361,3 +361,42 @@ footer {
 .registerSubmit {
   margin-bottom: 20px;
 }
+
+.offerInfo {
+  margin-top: 40px;
+  padding: 0 30px;
+  text-align: center;
+}
+
+.offerHeader {
+  color: #231F20;
+  font-family: "Times New Roman";
+}
+
+.offerHeaderText {
+  padding-top: 20px;
+  font-size: 1.1em;
+  color: #414042;
+}
+
+.offerElement {
+  padding: 30px 30px 0 30px;
+  text-align: center;
+}
+
+.offerTitle {
+  font-family: Helvetica;
+  text-transform: uppercase;
+  color: #222;
+}
+
+.aofferImg {
+  margin: 20px 0;
+  width: 100%;
+}
+
+.offerPriceButton {
+  margin: 10px auto 30px;
+  font-size: 1em;
+  padding: 0.8em;
+}
