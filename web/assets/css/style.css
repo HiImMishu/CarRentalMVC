@@ -400,3 +400,92 @@ footer {
   font-size: 1em;
   padding: 0.8em;
 }
+
+.imageContainder {
+  display: block;
+  margin-top: 40px;
+  padding: 0 30px;
+}
+
+.sliderItem {
+  width: 100%;
+  height: 240px;
+}
+
+.nxt, .prv{
+  line-height: 130%;
+  padding: 10px;
+  position: absolute;
+  top: 300px;
+  font-size: 1.7em;
+  color: white;
+  border-radius: 5px 0 0 5px;
+}
+
+.nxt {
+  right: 30px;
+}
+
+.prv {
+  border-radius: 0 5px 5px 0;
+  left: 30px;
+}
+
+.nxt:hover, .prv:hover {
+  background-color: #111;
+  opacity: 0.9;
+}
+
+.noteContainer {
+  margin: 30px;
+  padding: 10px 20px;
+  border: 1.5px solid #404040;
+  border-radius: 3px;
+}
+
+.infoLabel {
+  margin: 0 -20px;
+  padding: 0 20px 5px;
+  display: block;
+  font-size: 1.5em;
+  border-bottom: 1.5px solid #404040;
+}
+
+.infoHeader {
+  padding-top: 10px;
+  color: #1A2026;
+}
+
+.infoItem {
+  display: inline-block;
+  width: 50%;
+  line-height: 1.6em;
+}
+
+.prices {
+  padding: 0 30px;
+}
+
+.priceTable {
+  width: 100%;
+  border: 2px solid #535353;
+  border-collapse: collapse;
+}
+
+th {
+  color: #FAFAF2;
+  font-size: 1.1em;
+  text-align: left;
+  background-color: #404040;
+}
+
+.priceTime {
+  border-right: 2px solid #535353;
+  padding: 7px 10px;
+  width: 70%;
+}
+
+.priceMoney {
+  padding: 0 10px;
+  width: 30%;
+}

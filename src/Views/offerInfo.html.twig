@@ -1,0 +1,55 @@
+{% extends 'Views/Layout/layout.html.twig' %}
+
+{% block siteJS %}
+  <script src="{{asset('js/modelSlider.js')}}"></script>
+{% endblock %}
+
+{% block content %}
+
+<div class="offerInfo">
+  <h1 class="offerHeader">{{car.brand}} {{car.model}}</h1>
+</div>
+
+<div id="slider">
+{% for photo in photos %}
+<div class="imageContainder">
+  <img class="sliderItem" src="{{asset('img/' ~ photo.imageUrl)}}">
+</div>
+{% endfor %}
+<a class="prv" onclick="plusSlides(-1, 0)">&#10094;</a>
+<a class="nxt" onclick="plusSlides(1, 0)">&#10095;</a>
+</div>
+
+<div class="noteContainer">
+  <label class="infoLabel">Informacje</label>
+  <div class="modelInfo">
+
+    <h2 class="infoHeader">{{car.brand ~" "~ car.model}}</h2>
+
+    <span class="infoItem">Rok produkcji:  </span> <span> {{car.productionYear}} </span>
+    <span class="infoItem">Silnik:         </span> <span> {{car.engine}}         </span>
+    <span class="infoItem">Moc:            </span> <span> {{car.power}} KM       </span>
+    <span class="infoItem">Napęd:          </span> <span> {{car.drive}}          </span>
+    <span class="infoItem">Skrzynia:       </span> <span> {{car.gearBox}}        </span>
+
+  </div>
+</div>
+
+<div class="prices">
+  <table class="priceTable">
+  <tr>
+    <th class="priceTime"> Czas Najmu </th>
+    <th class="priceMoney"> Cena       </th>
+  </tr>
+
+  <tr>
+    <td class="priceTime"> 2 godziny </td>
+    <td class="priceMoney"> 300zł    </td>
+  </tr>
+  </table>
+</div>
+
+<a class="offerButton offerPriceButton" href="#">REZERWUJ</a>
+
+
+{% endblock %}

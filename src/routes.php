@@ -21,8 +21,9 @@ $routes->add('register', new Route('/register', array(
   '_controller' => 'Controllers\\RegisterController::indexAction'
 )));
 
-$routes->add('offer', new Route('/offer', array(
-  '_controller' => 'Controllers\\OfferController::indexAction'
+$routes->add('offer', new Route('/offer/{id}', array(
+  '_controller' => 'Controllers\\OfferController::indexAction',
+  'id'          => null
 )));
 
 return $routes;

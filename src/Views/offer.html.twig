@@ -11,7 +11,7 @@
 <div class="offerElement">
   <h2 class="offerTitle">{{car.brand}} {{car.model}}</h2>
   <img class="aofferImg" src="{{asset('img/' ~ car.imageMainUrl)}}">
-  <a class="offerButton offerPriceButton">SPRAWDŹ CENNIK</a>
+  <a class="offerButton offerPriceButton" href="{{url('offer', {'id': car.id})}}">SPRAWDŹ CENNIK</a>
 </div>
 {% endfor %}
 
