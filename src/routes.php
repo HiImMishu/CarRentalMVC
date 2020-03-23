@@ -26,4 +26,9 @@ $routes->add('offer', new Route('/offer/{id}', array(
   'id'          => null
 )));
 
+$routes->add('reservation', new Route('/reservation/{id}', array(
+  '_controller' => 'Controllers\\ReservationController::indexAction',
+  'id'          => null
+)));
+
 return $routes;

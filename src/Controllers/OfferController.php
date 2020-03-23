@@ -5,6 +5,7 @@ namespace Controllers;
 use Simplex\App;
 use Models\Car;
 use Models\ImageUrl;
+use Models\RentalPrice;
 
 class OfferController extends App
 {
@@ -32,10 +33,11 @@ class OfferController extends App
     else
       $car = $eM->getRepository('Models\Car')->find($id);
 
+    $prices = $eM->getRepository('Models\RentalPrice')->findBy(['car' => $id]);
+
     if(is_null($car))
       return $this->render('Views/404.html.twig');
-
-    return $this->render('Views/offerInfo.html.twig', ['car' => $car, 'photos' => $images]);
+    return $this->render('Views/offerInfo.html.twig', ['car' => $car, 'photos' => $images, 'prices' => $prices]);
   }
 
 }

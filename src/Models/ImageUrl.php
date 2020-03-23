@@ -4,9 +4,7 @@ namespace Models;
 
 use Models\Car;
 
-/**
-  *@Entity @Table(name ="ImageUrl")
-  */
+/** @Entity @Table(name ="ImageUrl") */
 
 class ImageUrl
 {

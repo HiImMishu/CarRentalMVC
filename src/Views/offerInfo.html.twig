@@ -42,14 +42,16 @@
     <th class="priceMoney"> Cena       </th>
   </tr>
 
-  <tr>
-    <td class="priceTime"> 2 godziny </td>
-    <td class="priceMoney"> 300zł    </td>
-  </tr>
+  {% for p in prices %}
+    <tr>
+      <td class="priceTime">  {{p.timePeriod}} </td>
+      <td class="priceMoney"> {{p.price}} zł   </td>
+    </tr>
+  {% endfor %}
   </table>
 </div>
 
-<a class="offerButton offerPriceButton" href="#">REZERWUJ</a>
+<a class="offerButton offerPriceButton" href="{{url('reservation', {'id': car.id})}}">REZERWUJ</a>
 
 
 {% endblock %}
