@@ -2,6 +2,29 @@
 
 {% block content %}
 
-Rezerwacja {{id}}
+<div class="reservation">
+  <h1 class="offerHeader">{{car.brand}} {{car.model}}</h1>
+  <p class="offerHeaderText">{{error}}</p>
 
+  <form class="left" method="post">
+    <div class="reservationElement">
+      <label class="reservationLabel" for="dateFrom">Wybierz datę wypożyczenia pojazdu</label>
+      <input class="reservationInput" id="dateFrom" name="dateFrom" type="date" required>
+      <div class="loginError">
+        {{dateFromError}}
+      </div>
+    </div>
+    <div class="reservationElement">
+      <label class="reservationLabel" for="dateTo">Wybierz datę zwrotu pojazdu</label>
+      <input class="reservationInput" id="dateTo" name="dateTo" type="date" required>
+      <div class="loginError">
+        {{dateToError}}
+      </div>
+    </div>
+    <button class="reservationSubmit" type="submit">Zarezerwuj</button>
+    <div class="loginError">
+      {{takenError}}
+    </div>
+  </form>
+</div>
 {% endblock %}

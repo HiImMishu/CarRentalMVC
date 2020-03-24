@@ -39,6 +39,7 @@ class LoginController extends App
     else
     {
       $this->getSession()->set('firstName', $user->getFirstName());
+      $this->getSession()->set('id', $user->getId());
       return $this->redirect('/');
     }
   }

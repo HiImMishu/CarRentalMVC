@@ -316,7 +316,7 @@ footer {
   font-size: 15px;
 }
 
-.loginInput, .registerInput {
+.loginInput, .registerInput, .reservationInput {
   display: block;
   margin-top: 50px;
   width: calc(95% - 4px);
@@ -326,7 +326,7 @@ footer {
   border-radius: 3px;
 }
 
-.loginSubmit, .registerSubmit {
+.loginSubmit, .registerSubmit, .reservationSubmit {
   padding: 1px 0;
   margin-top: 50px;
   border-radius: 3px;
@@ -488,4 +488,30 @@ th {
 .priceMoney {
   padding: 0 10px;
   width: 30%;
+}
+
+.reservation {
+  margin: 30px;
+  text-align: center;
+}
+
+.reservationInput {
+  margin-top: 0;
+}
+
+.reservationSubmit {
+  background: #41B619;
+  border: 2px inset #116315;
+}
+
+.reservationSubmit:hover {
+  background: #116315;
+}
+
+.reservationElement {
+  margin-top: 40px;
+}
+
+.left {
+  text-align: left;
 }
