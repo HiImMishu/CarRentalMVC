@@ -4,14 +4,20 @@ namespace Controllers;
 
 use Symfony\Component\HttpFoundation\Response;
 use Simplex\App;
+use Models\Car;
+use Models\ImageUrl;
 
 class IndexController extends App
 {
   public function indexAction()
   {
-    if($this->getSession()->has('firstName'))
-      return $this->render('Views/list.html.twig', ['firstName' => $this->getSession()->get('firstName')]);
+    $eM = $this->getEntityMenager();
 
-    return $this->render('Views/list.html.twig');
+    $query = $eM->createQuery('SELECT c FROM Models\Car c');
+    $cars = $query->getResult();
+
+    return $this->render('Views/list.html.twig', ['firstName' => $this->getSession()->get('firstName'), 'cars' => $cars]);
+
+    return $this->render('Views/list.html.twig', ['cars' => $cars]);
   }
 }

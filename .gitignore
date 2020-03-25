@@ -1,8 +1,5 @@
 vendor/*
-.idea/*
 composer.lock
 src/config.php
+web/assets/img/*
 cache/*
-node_modules/*
-web/node_modules/*
-web/typings/*

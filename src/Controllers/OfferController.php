@@ -21,7 +21,7 @@ class OfferController extends App
     $query = $eM->createQuery('SELECT c FROM Models\Car c');
     $cars = $query->getResult();
 
-    return $this->render('Views/offer.html.twig', ['cars' => $cars]);
+    return $this->render('Views/offer.html.twig', ['firstName' => $this->getSession()->get('firstName'), 'cars' => $cars]);
   }
 
   private function offerInfo($id)
@@ -36,8 +36,8 @@ class OfferController extends App
     $prices = $eM->getRepository('Models\RentalPrice')->findBy(['car' => $id]);
 
     if(is_null($car))
-      return $this->render('Views/404.html.twig');
-    return $this->render('Views/offerInfo.html.twig', ['car' => $car, 'photos' => $images, 'prices' => $prices]);
+      return $this->render('Views/404.html.twig', ['firstName' => $this->getSession()->get('firstName')]);
+    return $this->render('Views/offerInfo.html.twig', ['firstName' => $this->getSession()->get('firstName'), 'car' => $car, 'photos' => $images, 'prices' => $prices]);
   }
 
 }

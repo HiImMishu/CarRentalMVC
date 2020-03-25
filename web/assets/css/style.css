@@ -8,13 +8,17 @@ input {
   border: none;
 }
 
+html, body {
+  height: 100%;
+}
+
 .logoLink {
   text-decoration: none;
   color: #FFF;
 }
 
 .container {
-  width: 100;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -94,7 +98,6 @@ input {
 .offer {
   background-color: #242240;
   height: 250px;
-  padding: 0 20px;
 }
 
 .offerImg {
@@ -514,4 +517,83 @@ th {
 
 .left {
   text-align: left;
+}
+
+@media only screen and (min-width: 600px)
+{
+  .offer {
+    height: 500px;
+  }
+
+  .offerText {
+    padding-top: 90px;
+    font-size: 80px;
+  }
+
+  .slideshow-container {
+    height: 500px;
+  }
+
+  .sliderImg, #slider, .sliderItem {
+    height: 500px;
+  }
+
+  .opacity {
+    top: 589px;
+    width: 100%;
+    height: 501px;
+  }
+
+  .text {
+    top: -265px;
+  }
+
+  .prev, .next {
+    top: -305px;
+  }
+
+  .nxt, .prv {
+    top: 425px;
+  }
+
+  .articlePhoto {
+    height: 500px;
+  }
+
+  form {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .container {
+    min-height: calc(100% - 400px);
+  }
+
+  .burgerPosition {
+    display: none;
+  }
+
+  .nav, #navigation {
+    display: block;
+    position: absolute;
+    top: 65px;
+    right: 50px;
+  }
+
+  .item {
+    display: inline-block;
+    float: right;
+    opacity: 1;
+    visibility: visible;
+    transform: skew(-20deg);
+    margin-left: 10px;
+    padding: 10px;
+    background-color: rgba(255, 0, 0, 0.7);
+    transition: all 0.3s;
+  }
+
+  .item:hover {
+    background-color: rgba(255, 0, 0, 1);
+  }
+
 }

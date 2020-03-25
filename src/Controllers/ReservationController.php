@@ -23,9 +23,9 @@ class ReservationController extends App
       $eM = $this->getEntityMenager();
       $car = $eM->getRepository('Models\Car')->find($id);
       if (is_null($car))
-        return $this->render('Views/404.html.twig');
+        return $this->render('Views/404.html.twig', ['firstName' => $this->getSession()->get('firstName')]);
 
-      return $this->render('Views/reservation.html.twig', ['car' => $car]);
+      return $this->render('Views/reservation.html.twig', ['firstName' => $this->getSession()->get('firstName'), 'car' => $car]);
 
     }
     //Jeśli wysłąno formularz i jest zalogowany uzytkownik
@@ -42,7 +42,7 @@ class ReservationController extends App
         $dateToError = "Data zwrotu musi być późniejsza niż data wynajmu.";
 
       if(!is_null($dateFromError) || !is_null($dateToError))
-        return $this->render('Views/reservation.html.twig', ['dateFromError' => $dateFromError, 'dateToError' => $dateToError]);
+        return $this->render('Views/reservation.html.twig', ['firstName' => $this->getSession()->get('firstName'), 'dateFromError' => $dateFromError, 'dateToError' => $dateToError]);
 
       $takenError = $this->carAvailability($id, $dateFrom);
 
@@ -67,11 +67,11 @@ class ReservationController extends App
         $eM->persist($reservation);
         $eM->flush();
 
-        return $this->render('Views/reservationSuccess.html.twig');
+        return $this->render('Views/reservationSuccess.html.twig', ['firstName' => $this->getSession()->get('firstName')]);
       }
       //Jeśli samochód jest zarezerwowany
       else
-        return $this->render('Views/reservation.html.twig', ['takenError' => $takenError]);
+        return $this->render('Views/reservation.html.twig', ['firstName' => $this->getSession()->get('firstName'), 'takenError' => $takenError]);
 
     }
     //Jeśli wysłąno formularz a Użytkownik nie jest zalogowany
