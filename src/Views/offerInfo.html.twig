@@ -20,37 +20,36 @@
 <a class="nxt" onclick="plusSlides(1, 0)">&#10095;</a>
 </div>
 
-<div class="noteContainer">
-  <label class="infoLabel">Informacje</label>
-  <div class="modelInfo">
+  <div class="noteContainer">
+    <label class="infoLabel">Informacje</label>
+      <div class="modelInfo">
 
-    <h2 class="infoHeader">{{car.brand ~" "~ car.model}}</h2>
+        <h2 class="infoHeader">{{car.brand ~" "~ car.model}}</h2>
 
-    <span class="infoItem">Rok produkcji:  </span> <span> {{car.productionYear}} </span>
-    <span class="infoItem">Silnik:         </span> <span> {{car.engine}}         </span>
-    <span class="infoItem">Moc:            </span> <span> {{car.power}} KM       </span>
-    <span class="infoItem">Napęd:          </span> <span> {{car.drive}}          </span>
-    <span class="infoItem">Skrzynia:       </span> <span> {{car.gearBox}}        </span>
+        <span class="infoItem">Rok produkcji:  </span> <span> {{car.productionYear}} </span>
+        <span class="infoItem">Silnik:         </span> <span> {{car.engine}}         </span>
+        <span class="infoItem">Moc:            </span> <span> {{car.power}} KM       </span>
+        <span class="infoItem">Napęd:          </span> <span> {{car.drive}}          </span>
+        <span class="infoItem">Skrzynia:       </span> <span> {{car.gearBox}}        </span>
 
-  </div>
-</div>
+      </div>
+    </div>
 
-<div class="prices">
-  <table class="priceTable">
-  <tr>
-    <th class="priceTime"> Czas Najmu </th>
-    <th class="priceMoney"> Cena       </th>
-  </tr>
+    <div class="prices">
+      <table class="priceTable">
+      <tr>
+        <th class="priceTime"> Czas Najmu </th>
+        <th class="priceMoney"> Cena       </th>
+      </tr>
 
-  {% for p in prices %}
-    <tr>
-      <td class="priceTime">  {{p.timePeriod}} </td>
-      <td class="priceMoney"> {{p.price}} zł   </td>
-    </tr>
-  {% endfor %}
-  </table>
-</div>
-
+      {% for p in prices %}
+        <tr>
+          <td class="priceTime">  {{p.timePeriod}} </td>
+          <td class="priceMoney"> {{p.price}} zł   </td>
+        </tr>
+      {% endfor %}
+      </table>
+    </div>
 <a class="offerButton offerPriceButton" href="{{url('reservation', {'id': car.id})}}">REZERWUJ</a>
 
 

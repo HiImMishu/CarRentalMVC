@@ -12,8 +12,8 @@
   {% block siteJS %}{% endblock %}
 </head>
 <body>
+{% block header %}{{ include('Views/Layout/header.html.twig') }}{% endblock %}
   <div class="container">
-    {% block header %}{{ include('Views/Layout/header.html.twig') }}{% endblock %}
     {% block content %}{% endblock %}
     {% block login %}{% endblock %}
   </div>

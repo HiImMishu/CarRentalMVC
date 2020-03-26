@@ -1,25 +1,27 @@
 
 <header>
   <div class="topBar">
-    <span class="logoText"><a class="logoLink" href="{{url('Index')}}">Lux<span class="colorRed">Car</span></a></span>
-    <span class="topBarItems">
-      {% if not firstName %}
-        <a class="topBarItem" href="{{url('login')}}">Logowanie</a>
-        <a class="topBarItem" href="{{url('register')}}">Rejestracja</a>
-      {% else %}
-        <span class="topBarText">Witaj {{firstName}}</span>
-        <a class="topBarItem" href="{{url('logout')}}">Wyloguj</a>
-      {% endif %}
-    </span>
-    <span class="burgerPosition">
-      <span id="toggle" onClick="onClickMenu()">&#9776;</span>
-    </span>
+    <div class="helper">
+      <span class="logoText"><a class="logoLink" href="{{url('Index')}}">Lux<span class="colorRed">Car</span></a></span>
+      <span class="topBarItems">
+        {% if not firstName %}
+          <a class="topBarItem" href="{{url('login')}}">Logowanie</a>
+          <a class="topBarItem" href="{{url('register')}}">Rejestracja</a>
+        {% else %}
+          <span class="topBarText">Witaj {{firstName}}</span>
+          <a class="topBarItem" href="{{url('logout')}}">Wyloguj</a>
+        {% endif %}
+      </span>
+      <span class="burgerPosition">
+        <span id="toggle" onClick="onClickMenu()">&#9776;</span>
+      </span>
+    </div>
+    <nav id="navigation" class="nav">
+      <a class="item" href="#">Pozyja 1</a>
+      <a class="item" href="#">Pozyja 2</a>
+      <a class="item" href="#">Pozyja 3</a>
+      <a class="item" href="#">Pozyja 4</a>
+      <a class="item" href="#">Pozyja 5</a>
+    </nav>
   </div>
-  <nav id="navigation" class="nav">
-    <a class="item" href="#">Pozyja 1</a>
-    <a class="item" href="#">Pozyja 2</a>
-    <a class="item" href="#">Pozyja 3</a>
-    <a class="item" href="#">Pozyja 4</a>
-    <a class="item" href="#">Pozyja 5</a>
-  </nav>
 </header>
