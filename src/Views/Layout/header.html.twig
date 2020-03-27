@@ -17,11 +17,13 @@
       </span>
     </div>
     <nav id="navigation" class="nav">
-      <a class="item" href="#">Pozyja 1</a>
-      <a class="item" href="#">Pozyja 2</a>
-      <a class="item" href="#">Pozyja 3</a>
-      <a class="item" href="#">Pozyja 4</a>
-      <a class="item" href="#">Pozyja 5</a>
+      <a class="item" href="{{url("contact")}}">KONTAKT</a>
+      <a class="item" href="{{url("aboutCompany")}}">O FIRMIE</a>
+      <a class="item" href="{{url("offer")}}">OFERTA</a>
+      {% if firstName %}
+        <a class="item" href="{{url("profile")}}">MOJE KONTO</a>
+      {% endif %}
+      <a class="item" href="{{url("Index")}}">STRONA GŁÓWNA</a>
     </nav>
   </div>
 </header>

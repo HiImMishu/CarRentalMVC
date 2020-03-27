@@ -31,4 +31,16 @@ $routes->add('reservation', new Route('/reservation/{id}', array(
   'id'          => null
 )));
 
+$routes->add('profile', new Route('/profile', array(
+  '_controller' => 'Controllers\\ProfileController::indexAction'
+)));
+
+$routes->add('contact', new Route('/contact', array(
+  '_controller' => 'Controllers\\ContactController::indexAction'
+)));
+
+$routes->add('aboutCompany', new Route('/company', array(
+  '_controller' => 'Controllers\\AboutCompanyController::indexAction'
+)));
+
 return $routes;
