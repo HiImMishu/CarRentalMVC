@@ -1,5 +1,9 @@
 {% extends 'Views/Layout/layout.html.twig' %}
 
 {% block content %}
-User Profile
+
+{% for reservation in reservations %}
+  {{reservation.dateTo}}
+{% endfor %}
+
 {% endblock %}
